@@ -1,21 +1,26 @@
-import { Button, Card, Container, Gallery, Image, More, Title, Wrapper } from "./styled"
+import React from "react";
+import { dataImg } from "./data";
+import { Button, Card, Container, Gallery, More, Title, Wrapper } from "./styled"
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+
 
 const Main = () => {
+    const CardContainer = React.memo(({ img }) => (
+        <Card key={img.id}>
+            <LazyLoadImage alt="pexel images" src={img.src} effect="blur" className="img" loading="lazy" />
+
+        </Card>
+    ));
+
     return (
         <Container>
             <Title>Gallery</Title>
             <Gallery>
                 <Wrapper>
-                    <Card><Image src="./image/main/pexel_1.jpg" /></Card>
-                    <Card><Image src="./image/main/pexel_2.jpg" /></Card>
-                    <Card><Image src="./image/main/pexel_3.jpg" /></Card>
-                    <Card><Image src="./image/main/pexel_4.jpg" /></Card>
-                    <Card><Image src="./image/main/pexel_5.jpg" /></Card>
-                    <Card><Image src="./image/main/pexel_6.jpg" /></Card>
-                    <Card><Image src="./image/main/pexel_7.jpg" /></Card>
-                    <Card><Image src="./image/main/pexel_8.jpg" /></Card>
-                    <Card><Image src="./image/main/pexel_9.jpg" /></Card>
-                    <Card><Image src="./image/main/pexel_10.jpg" /></Card>
+                    {dataImg.map(img => (
+                        <CardContainer key={img.id} img={img} />
+                    ))}
                 </Wrapper>
 
                 <More>

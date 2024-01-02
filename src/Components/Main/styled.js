@@ -44,14 +44,14 @@ export const Card = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-        
-`;
-export const Image = styled.img`
+        .img{
     max-width: 400px;
     min-height: 500px;
     object-fit: cover;
     border-radius: 10px;
+        }
 `;
+
 export const More = styled.div` 
 
     width: 100%;
