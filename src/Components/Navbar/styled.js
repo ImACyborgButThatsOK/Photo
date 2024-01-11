@@ -53,6 +53,7 @@ export const Search = styled.input`
     font-size: 20px;    
 `;
 export const Right = styled.div`
+    flex: 2;
    @media screen and (max-width: 600px) {
         display: none;
   }
