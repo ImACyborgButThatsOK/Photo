@@ -8,12 +8,21 @@ export const Container = styled.div`
     display: flex;
     color: silver;
     padding: 20px;
+    @media screen and (max-width: 600px) {
+    flex-direction: column;
+    gap: 20px;
+
+  }
 `;
 
 export const Title = styled.h1`
     text-align: center;
     font-size: 50px;
     font-weight: 300;
+    @media screen and (max-width: 600px) {
+        font-size: 40px;
+        
+  }
    
 `;
 export const Left = styled.div`
@@ -23,6 +32,10 @@ export const Left = styled.div`
     justify-content: center;
     flex-direction: column;
     gap: 40px;
+    @media screen and (max-width: 600px) {
+    padding: 20px;
+    border-bottom: 1px solid silver;
+  }
 `;
 export const SocialMidia = styled.div`
     width: 100%;
@@ -44,8 +57,10 @@ export const SocialMidia = styled.div`
 `;
 export const Center = styled.div`
     flex: 1;
-
-
+    @media screen and (max-width: 600px) {
+    border-bottom: 1px solid silver;
+    padding: 20px;
+  }
 `
 export const ContainerLinks = styled.div`
     margin-top: 50px;
@@ -62,7 +77,9 @@ export const Links = styled.a`
     color: silver;
     font-size: 30px;
     font-weight: 300;
-
+    @media screen and (max-width: 600px) {
+        font-size: 20px;
+  }
     transition: all ease 0.4s;
     &:hover{
         filter: brightness(0.5);
@@ -83,6 +100,9 @@ export const BuyTitle = styled.a`
     font-weight: 300px;
     text-decoration: none;
     color: #b7e4c7;
+    @media screen and (max-width: 600px) {
+        font-size: 40px;
+  }
 
 `;
 export const Image = styled.img`

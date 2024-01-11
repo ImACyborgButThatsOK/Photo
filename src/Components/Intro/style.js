@@ -5,11 +5,18 @@ export const Container = styled.div`
     height: 100vh;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
+    @media screen and (max-width: 600px) {
+        width: 100%;
+        height: 100%;
+  }
 `;
 export const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+  }
 `;
 export const Left = styled.div`
     flex: 1;
@@ -39,6 +46,9 @@ export const InfoContainer = styled.h1`
 export const Title = styled.h1`
     font-size: 60px;
     font-weight: 300;
+    @media screen and (max-width: 600px) {
+        font-size: 40px;
+  }
 `;
 export const Desc = styled.p`
     font-size: 20px;
@@ -54,6 +64,10 @@ export const Button = styled.button`
     border-radius: 10px;
     color: white;
     transition: all ease 0.4s;
+    @media screen and (max-width: 600px) {
+        font-size: 25px;
+    padding: 10px 30px;
+  }
     &:hover{
         filter: brightness(0.7);
         cursor: pointer;
